@@ -27,6 +27,7 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Introduced myself to Helen X.
 	+ Helped Helen figure out putting participation.md into her mcb185_homework directory
 	+ asked the TA a question in class 
+	+ Total 5 points
 
 - Week 2
 - Week 3
