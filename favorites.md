@@ -1,4 +1,4 @@
-Some of my favorites include: 
+# Some of my favorites include: 
  + watching k dramas
  + cooking 
  + listening to music 
