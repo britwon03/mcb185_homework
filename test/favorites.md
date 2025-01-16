@@ -1,5 +1,5 @@
 # Some of my favorites include: #
-= Kdramas: 
+## Kdramas: 
  + Hotel Del Luna 
  + Welcome to Samdari 
  + Tommorrow 
@@ -8,7 +8,7 @@
   + Said the Sky 
   + Seventeen 
   
-= Miscellaneous:
+## Miscellaneous:
  + cooking 
  + listening to music 
  + going on drives 
