@@ -4,7 +4,7 @@
  + Welcome to Samdari 
  + Tommorrow 
  
- - Artists: 
+ ## Artists: 
   + Said the Sky 
   + Seventeen 
   
