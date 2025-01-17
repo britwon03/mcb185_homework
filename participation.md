@@ -34,8 +34,8 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ helped my classmate catch up coding in class
 	+ Attended class on Thursday 
 	+ I met Gennie on Thursday 
-	+ 
-	+ Total _ points 
+	+ Worked with Gennie on the Assessment after class 
+	+ Total 5 points 
 	
 - Week 3
 - Week 4
