@@ -39,7 +39,10 @@ more than one point per category. There is a maximum of 5 points each week.
 	
 - Week 3
 	+ Attended class on Tuesday 
-	+ Did the Assesement during class 
+	+ Did the Assessement during class 
+	+ Explained to my classmate what difference usage between wc and less 
+	+ Attended class on Thursday 
+	
 	
 - Week 4
 - Week 5
