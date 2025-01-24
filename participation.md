@@ -42,7 +42,8 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Did the Assessement during class 
 	+ Explained to my classmate what difference usage between wc and less 
 	+ Attended class on Thursday 
-	
+	+ Asked the TA a question about using python in the terminal in class 
+	+ Total 5 points 
 	
 - Week 4
 - Week 5
