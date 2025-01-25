@@ -260,8 +260,3 @@ print(shannon_entropy(10, 10, 10, 10))
 print(shannon_entropy(40, 10, 5, 5))  
 print(shannon_entropy(0, 0, 0, 0))     
 print(shannon_entropy(50, 0, 0, 0)) 
-
-
-if a + c + g + t <= 13: return 
-return 
-
