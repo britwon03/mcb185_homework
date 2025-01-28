@@ -15,3 +15,4 @@ def prob_to_char(prob):
 
 print(char_to_prob('A'))
 print(prob_to_char(0.001))
+print(prob_to_char(0.456))
