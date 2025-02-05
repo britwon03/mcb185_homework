@@ -157,7 +157,7 @@ while True:
 
     if total_points <= 10: break 
 
-# D&D Stats 
+# D&D Stats
 import random
 trials = 100
 
