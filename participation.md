@@ -53,6 +53,8 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Asked the TA a question on Tuesday
 	+ Total 5 points 
 - Week 5
+	+ Attended class on Tuesday 
+	
 - Week 6
 - Week 7
 - Week 8
