@@ -54,6 +54,9 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Total 5 points 
 - Week 5
 	+ Attended class on Tuesday 
+	+ Attended class on Thursday 
+	+ Helped a classmate who was demoing for the 23triples homekwork 
+	+ Total points 
 	
 - Week 6
 - Week 7
