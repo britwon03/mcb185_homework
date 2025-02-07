@@ -1,20 +1,28 @@
-import random
 
-def roll_d20():
-    return random.randint(1, 20)
+import random 
+def advantage(): 
+    roll1 = random.randint(1,20) 
+    roll2 = random.randint(1,20)
+    if roll1 > roll2: return roll1 
+    return roll2 
 
-def saving_throw(dc, advantage=False, disadvantage=False):
-    if advantage:
-        roll = max(roll_d20(), roll_d20())
-    elif disadvantage:
-        roll = min(roll_d20(), roll_d20())
-    else:
-        roll = roll_d20()
-    
-    return roll, roll >= dc
+def disadvantage(): 
+    roll1 = random.randint(1,20) 
+    roll2 = random.randint(1,20)
+    if roll1 < roll2: return roll1 
+    return roll2 
 
-dcs = [5, 10, 15]  # Renamed the list to avoid variable conflict
+trials = 1000000
+dc = 5 
 
-for dc in dcs:
-    roll, success = saving_throw(dc)
-    print(roll, "Success" if success else "Failure")
+for dc in range(5,16,5): 
+    norm = 0 
+    adv = 0 
+    dis = 0 
+    for i in range(trials): 
+        r1 = random.randint(1,20) 
+        r2 = random.randint(1,20) 
+        if r1 >= dc: norm += 1 
+        if r1>= dc and r2 >= dc: dis += 1 
+        if r1>= dc or r2> dc: adv += 1 
+    print(dc, norm/trials, adv/trials, dis/trials)  
