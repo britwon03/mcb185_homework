@@ -55,8 +55,10 @@ more than one point per category. There is a maximum of 5 points each week.
 - Week 5
 	+ Attended class on Tuesday 
 	+ Attended class on Thursday 
-	+ Helped a classmate who was demoing for the 23triples homekwork 
-	+ Total points 
+	+ Helped a classmate who was demoing for the 23triples homework 
+	+ Asked a question to the TA in class why we can't use max() instead of inequalities during the savingthrows demo. 
+	+ Finished the homework for all of unit 2, threw away/deleted the code and redid it for practice. 
+	+ Total 5 points 
 	
 - Week 6
 - Week 7
