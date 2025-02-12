@@ -61,6 +61,9 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Total 5 points 
 	
 - Week 6
+	+ Attended class on Tuesday 
+	+ Attempted the in class assessment 
+	+ Asked a question on Method Syntax with ".replace" 
 - Week 7
 - Week 8
 - Week 9
