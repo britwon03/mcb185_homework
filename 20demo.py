@@ -158,61 +158,61 @@ while True:
     if total_points <= 10: break 
 
 # D&D Stats
-import random
-trials = 100
+import random 
+trial = 2
 
+sum_3d6 = 0 
+sum_3d6r1 = 0 
+sum_3d6x2 = 0 
+sum_4d6r1 = 0 
 
-sum_3D6 = 0
-sum_3D6r1 = 0
-sum_3D6x2 = 0
-sum_4D6d1 = 0
-
-# Perform trials using a while loop
 i = 0
-while i < trials:
-    # 3D6: Roll 3 six-sided dice
+
+while i < trial:
     total = 0
-    for i in range(3):
-        total += random.randint(1, 6)
-    sum_3D6 += total
+     # 3d6 
+    for i in range(3):  
+        total += random.randint(1, 6)  
+    sum_3d6 += total  
+# 3dr1
+    total = 0 
+    for i in range(3): 
+        roll = random.randint(1,6) 
+        if roll == 1: 
+            roll = random.randint(2,6) 
+        total += roll 
+    sum_3d6r1 += total 
+# 3d6x2
+    total = 0 
+    for i in range(3): 
+        roll1 = random.randint(1,6) 
+        roll2 = random.randint(1,6) 
+        if roll1 > roll2 : roll = roll1 
+        roll = roll2 
+        total += roll 
+    sum_3d6x2 += total 
+    
+    total = 0 
+    for i in range(4): 
+        roll1 = random.randint(1,6)
+        roll2 = random.randint(1,6) 
+        roll3 = random.randint(1,6) 
+        roll4 = random.randint(1,6) 
+        total_sum = roll1 + roll2 + roll3 + roll4
+        if roll1 <= roll2 and roll1 <= roll3 and roll1 <= roll4: lowest = roll1
+        elif roll2 <= roll1 and roll2 <= roll3 and roll2 <= roll4: lowest = roll2
+        elif roll3 <= roll1 and roll3 <= roll2 and roll3 <= roll4: lowest = roll3
+        else: lowest = roll4
+        total = total_sum - lowest
+    sum_4d6r1 += total 
 
-    # 3D6r1: Roll 3 six-sided dice, but re-roll 1s
-    total = 0
-    for i in range(3):
-        roll = random.randint(1, 6)
-        if roll == 1:
-            roll = random.randint(2, 6)  
-        total += roll
-    sum_3D6r1 += total
 
-    # 3D6x2: Roll pairs of dice 3 times, keeping the max each time
-    total = 0
-    for i in range(3):
-        roll1 = random.randint(1, 6)
-        roll2 = random.randint(1, 6)
-        total += max(roll1, roll2)  
-    sum_3D6x2 += total
+    i += 1  
 
-    # 4D6d1: Roll 4 dice, drop the lowest
-    rolls = []
-    for i in range(4):
-        rolls.append(random.randint(1, 6))
-    rolls.sort() 
-    total = sum(rolls[1:]) 
-    sum_4D6d1 += total
-
-    i += 1  # Increment counter for while loop
-
-# Compute averages
-avg_3D6 = sum_3D6 / trials
-avg_3D6r1 = sum_3D6r1 / trials
-avg_3D6x2 = sum_3D6x2 / trials
-avg_4D6d1 = sum_4D6d1 / trials
-
-print(avg_3D6)
-print(avg_3D6r1)
-print(avg_3D6x2)
-print(avg_4D6d1)
+print(sum_3d6 / trial) 
+print(sum_3d6r1 /trial)
+print(sum_3d6x2 / trial)
+print(sum_4d6r1/ trial)
 
 
 
