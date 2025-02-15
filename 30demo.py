@@ -215,4 +215,8 @@ x = float('0.61803')
 print(i * x) 
 
 x = float('hello')
-print(sys.exit()) 
+
+
+# Pairwise Comparison 
+for i in range(0,len(list)): 
+    for j in range(X, len(list)):
