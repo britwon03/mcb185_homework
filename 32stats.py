@@ -36,7 +36,7 @@ def median(vals):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python script.py num1 num2 num3 ...")
+        print("Usage: python3 32stats.py num1 num2 num3 ...")
         return
     
     try:
