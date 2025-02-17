@@ -1,5 +1,3 @@
-import random
-import sys
 
 import sys
 import random
