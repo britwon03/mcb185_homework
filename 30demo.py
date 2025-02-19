@@ -220,3 +220,10 @@ x = float('hello')
 # Pairwise Comparison 
 for i in range(0,len(list)): 
     for j in range(X, len(list)):
+
+
+    
+# notes from class 
+# () --> tuples 
+#[] --> list (can add things to it)
+
