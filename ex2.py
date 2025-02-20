@@ -20,12 +20,10 @@ import random
 
 points_below = 0 
 points_above = 0 
-trials = 10
 
 while True: 
-    x = random.random() 
-    y = random.random() 
-    d = x ** 2   
-    if d > 1 : points_below += 1 
-    else: points_above += 1 
-    print(points_above/points_below * 4)
+    x = random.randint(1,100) 
+    d = x ** 2 
+    if d > 1: points_above += 1 
+    else: points_below += 1 
+    print(points_below/points_above)
