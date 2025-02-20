@@ -67,7 +67,13 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Did not attend class on Thursday because I felt unwell. 
 	+ Went to OH on Friday
 	+ Total 5 points 
-- Week 7
+- Week 7: 
+	+ Attended class on Tuesday 
+	+ Asked a question in class 
+	+ Attended class on Thursday 
+	+ Attempted the in class assessment again for unit 2
+	+ for practice, threw away all the code twice and redid unit 2 again.
+	+ Total: 5 points 
 - Week 8
 - Week 9
 - Week 10
