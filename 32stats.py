@@ -39,7 +39,7 @@ def main():
         print("Usage: python3 32stats.py num1 num2 num3 ...")
         return
     
-    vals = list(map(float, sys.argv[1:]))  # This will crash if input isn't numeric
+    vals = list(map(float, sys.argv[1:]))  
     
     print(f'Number of values: {len(vals)}')
     print(f'Minimum value, Maximum Value: {minimax(vals)}')
