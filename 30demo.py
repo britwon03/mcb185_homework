@@ -223,7 +223,4 @@ for i in range(0,len(list)):
 
 
     
-# notes from class 
-# () --> tuples 
-#[] --> list (can add things to it)
 
