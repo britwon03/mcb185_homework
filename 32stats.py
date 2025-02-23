@@ -1,27 +1,32 @@
-import sys 
 import math 
-
-
-
-def minimax(vals): 
-    maxi = vals[0]
-    mini = vals[0] 
+import sys 
+vals = [float(x) for x in sys.argv[1:]]
+def minimum(vals): 
+    mini = vals[0]
     for val in vals[1:]: 
-        if val < mini : mini = val
-        if val > maxi : maxi = val 
-    return mini, maxi 
+        if val < mini: mini = val
+    return mini 
+
+def maximum(vals): 
+    maxi = vals[0]
+    for val in vals[1:]: 
+        if val > maxi: maxi = val
+    return maxi 
 
 def mean(vals): 
     total = 0 
     for val in vals[0:]: 
-        total += val 
-    return (total/len(vals))
+        total += val
+    return (total/ len(vals))
 
 def stdv(vals): 
-    if len(vals) < 2:
-        return 0
-    avg = mean(vals)
-    variance = sum((x - avg) ** 2 for x in vals) / (len(vals) - 1)
+    if len(vals) < 2: 
+        return 0 
+    avg = mean(vals) 
+    variance = 0
+    for val in vals:
+        variance += (val - avg) ** 2
+    variance /= (len(vals) - 1)
     return math.sqrt(variance)
 
 def median(vals):
@@ -34,17 +39,10 @@ def median(vals):
         return sorted_num[mid]
 
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python3 32stats.py num1 num2 num3 ...")
-        return
-    
-    vals = list(map(float, sys.argv[1:]))  
-    
-    print(f'Number of values: {len(vals)}')
-    print(f'Minimum value, Maximum Value: {minimax(vals)}')
-    print(f'Mean: {mean(vals)}')
-    print(f'Standard Deviation: {stdv(vals)}')
-    print(f'Median: {median(vals)}')
 
-main()
+print(f'Number of Values: {len(vals)}') 
+print(f'Mean: {mean(vals)}')
+print(f'Minimum: {minimum(vals)}')
+print(f'Maximum: {maximum(vals)}')
+print(f'Median: {median(vals)}')
+print(f'Standard Deviation: {stdv(vals)}')
