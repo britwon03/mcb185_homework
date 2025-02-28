@@ -77,6 +77,9 @@ more than one point per category. There is a maximum of 5 points each week.
 - Week 8: 
 	+ Attended class on Tuesday 
 	+ Pointed out a noticable typo in 35scoringmatrix.py 
-	+ Total 
+	+ threw away all the code for unit 3 and redid it again for practice
+	+ Attended class on Thursday 
+	+ Went to OH on Thursday night 
+	+ Total 5 points 
 - Week 9
 - Week 10
