@@ -39,3 +39,6 @@ for i in range(len(seq) - window_size + 1):
     gc_content = sequence.gc_comp(window_seq)
     gc_skew_val = sequence.gc_skew(window_seq)
     print(i, gc_content, gc_skew_val)
+
+
+
