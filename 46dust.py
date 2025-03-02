@@ -1,9 +1,7 @@
 import math 
 import sys 
 import gzip 
-import sys
-import gzip
-import math
+
 
 # Shannon Entropy Calculation 
 def shannon_entropy(seq):
