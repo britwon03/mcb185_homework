@@ -81,5 +81,10 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Attended class on Thursday 
 	+ Went to OH on Thursday night 
 	+ Total 5 points 
-- Week 9
+- Week 9: 
+	+ Attended class on Tuesday 
+	+ Attended class on Thursday 
+	+ went to TA OH to discuss 48transmembrane.py homework 
+	+ ask a question in class
+	+ threw away all code in unit 4 and redid it for practice
 - Week 10
