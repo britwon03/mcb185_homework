@@ -1,56 +1,34 @@
-import math 
-import sys 
-import gzip 
+import sys
+import math
+import mcb185
+
+def entropy(win):
+    a = win.count('A') / len(win)
+    c = win.count('C') / len(win)
+    g = win.count('G') / len(win)
+    t = win.count('T') / len(win)
+    h = 0
+    for freq in [a, c, g, t]:
+        if freq > 0:
+            h += freq * math.log2(freq)
+    return -h
+
+window_size = int(sys.argv[2]) 
+entro_threshold = float(sys.argv[3])
 
 
-# Shannon Entropy Calculation 
-def shannon_entropy(seq):
-    total = len(seq)
-    if total == 0:
-        return 0
-    frequencies = []
-    for nuc in "ACGT":
-        count = seq.count(nuc)
-        if count > 0:
-            frequencies.append(count / total)
-    entropy = 0
-    for p in frequencies:
-        entropy -= p * math.log2(p)
-    return entropy
 
-# Checks and masks low complexity regions 
-def mask_low_complexity(seq, window, threshold):
-    masked_seq = list(seq)
-    for i in range(len(seq) - window + 1):
-        window_seq = seq[i:i+window]
-        entropy = shannon_entropy(window_seq) # compares window to entropy threshold
-        if entropy < threshold:
-            for j in range(i, i+window):
-                masked_seq[j] = 'N'
-    return ''.join(masked_seq)
+for defline, seq in mcb185.read_fasta(sys.argv[1]): 
+    mask = list(seq) 
+    for i in range(len(seq) - window_size + 1): 
+        win = seq[i: i + window_size]
+        if entropy(win) < entro_threshold: 
+            for j in range(i, i + window_size): 
+                mask[j] = 'N'
+    
+    print(defline) 
+    masked_seq = ''.join(mask) 
+    for i in range(0, len(masked_seq), 60): 
+        print(masked_seq[i: i + 60])
 
-
-# fix this 
-window = int(sys.argv[2])
-threshold = float(sys.argv[3])
-with gzip.open(sys.argv[1], 'rt') as fp: 
-    header = None 
-    sequence = [] 
-    for line in fp: 
-        line = line.strip() 
-        if line.startswith('>'): # first line of file 
-            if header: 
-                print(header) 
-                masked_seq = mask_low_complexity(''.join(sequence), window, threshold) 
-                for i in range(0, len(masked_seq), 60): 
-                    print((masked_seq[i:i+60]))
-            header = line 
-            sequence = [] 
-        else: 
-            sequence.append(line) 
-    if header: # continues on with each line of the sequence 
-        print(header)
-        masked_seq = mask_low_complexity(''.join(sequence), window, threshold)
-        for i in range(0, len(masked_seq), 60):
-            print(masked_seq[i:i+60])
 
