@@ -1,44 +1,42 @@
-import sequence
-import sys 
-import gzip 
-fasta_file = sys.argv[1]
-window_size = int(sys.argv[2])
-## Fast Algorithm: 
-# Read sequence properly
-seq_list = [] # changing from string = faster running time 
-with gzip.open(fasta_file, 'rt') as fp:
+import sys
+import gzip
+import sequence  
+
+w = int(sys.argv[2])
+
+# Read sequence from gzipped FASTA file
+seq_list = []
+with gzip.open(sys.argv[1], 'rt') as fp:
     for line in fp:
         if line.startswith('>'):
             continue
-        seq_list.append(line.strip()) 
-seq = "".join(seq_list)  # Convert list to a single string (efficient concatenation)
-for i in range(len(seq) - window_size + 1):
-    window_seq = seq[i:i + window_size]
-    gc_cont = sequence.gc_comp(window_seq)
-    gc_skewval = sequence.gc_skew(window_seq)
-    print(i, gc_cont, gc_skewval)
+        seq_list.append(line.strip())
+
+seq = "".join(seq_list)
+
+# Initialize GC count and GC skew
+G_count = seq[:w].count('G')
+C_count = seq[:w].count('C')
+
+# Compute GC composition and GC skew for first window
+gc_comp = (G_count + C_count) / w
+gc_skew = (G_count - C_count) / (G_count + C_count) if (G_count + C_count) > 0 else 0
+
+print(0, gc_comp, gc_skew)
+
+# Slide the window across the sequence
+for i in range(1, len(seq) - w + 1):
+    left_nt = seq[i - 1]   # Leaving nucleotide
+    right_nt = seq[i + w - 1]  # Incoming nucleotide
+    
+    # Update counts
+    if left_nt == 'G': G_count -= 1
+    if left_nt == 'C': C_count -= 1
+    if right_nt == 'G': G_count += 1
+    if right_nt == 'C': C_count += 1
 
 
 
-# Slow Algorithm: mainly due to adding sequence to string
-import sys 
-import gzip 
-fasta_file = sys.argv[1]
-window_size = int(sys.argv[2])
-
-# Read sequence properly
-seq = ""
-with gzip.open(fasta_file, 'rt') as fp:
-    for line in fp:
-        if line.startswith('>'):
-            continue
-        seq += line.strip() 
- # Concatenate sequence lines + places it in the string to create a long DNA sequence
-for i in range(len(seq) - window_size + 1):
-    window_seq = seq[i:i + window_size]
-    gc_content = sequence.gc_comp(window_seq)
-    gc_skew_val = sequence.gc_skew(window_seq)
-    print(i, gc_content, gc_skew_val)
 
 
 
