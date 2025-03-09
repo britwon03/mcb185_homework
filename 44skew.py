@@ -20,8 +20,10 @@ C_count = seq[:w].count('C')
 
 # Compute GC composition and GC skew for first window
 gc_comp = (G_count + C_count) / w
-gc_skew = (G_count - C_count) / (G_count + C_count) if (G_count + C_count) > 0 else 0
-
+if (G_count + C_count) > 0: # avoids division by 0 
+    gc_skew = (G_count - C_count) / (G_count + C_count)
+else:
+    gc_skew = 0 
 print(0, gc_comp, gc_skew)
 
 # Slide the window across the sequence
