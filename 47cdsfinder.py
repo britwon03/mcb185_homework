@@ -1,26 +1,20 @@
-import sequence 
-import sys 
+import sys
 import mcb185
-def find_orfs(seq, min_len):
-    orfs = []
-    for frame in range(3):
-        for strand_seq in [seq, sequence.revcomp(seq)]:
-            protein = mcb185.translate(strand_seq[frame:])
-            start = None
-            for i, aa in enumerate(protein):
-                if aa == 'M' and start is None:
-                    start = i  # Mark the start of an ORF
-                elif aa == '*' and start is not None and (i - start) >= min_len:
-                    orfs.append(protein[start:i + 1])
-                    start = None  # Reset start after finding a stop codon
-    return orfs
+import sequence
 
 min_len = int(sys.argv[2])
 orf_count = 0
 
 for defline, seq in mcb185.read_fasta(sys.argv[1]):
-    orfs = find_orfs(seq, min_len)
-    for orf in orfs:
-        print(f'>{defline}-prot-{orf_count}')
-        print(orf)
-        orf_count += 1
+    for strand_seq in [seq, sequence.revcomp(seq)]:  # Both DNA strands
+        for frame in range(3):  # Three reading frames
+            protein = mcb185.translate(strand_seq[frame:])
+            start = None
+            for i, aa in enumerate(protein):
+                if aa == 'M' and start is None:
+                    start = i  # Start of ORF
+                elif aa == '*' and start is not None and (i - start) >= min_len:
+                    print(f'>{defline}-prot-{orf_count}')
+                    print(protein[start:i + 1])  # Print ORF sequence
+                    orf_count += 1
+                    start = None  # Reset for next ORF
