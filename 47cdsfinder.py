@@ -17,9 +17,9 @@ for defline, seq in mcb185.read_fasta(sys.argv[1]):
                 elif aa == '*' and start is not None:
                     orf_seq = protein[start:i]  # Exclude stop codon (*)
 
-                    if len(orf_seq) >= min_len:  
+                    if len(orf_seq) >= min_len:  # Checks the length is >= minimum length
                         print(f'>{defline}-prot-{orf_count}')
-                        print(orf_seq[:-1])  # Excludes stop codon  
+                        print(orf_seq)   
                         orf_count += 1
                     
                     start = None  # Reset for next ORF
