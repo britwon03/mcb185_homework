@@ -12,8 +12,8 @@ with gzip.open(sys.argv[1], 'rt') as fp:
             seq += line.strip()
 
 # Initialize GC count for the first window
-G_count = seq[:w].count('G')
-C_count = seq[:w].count('C')
+g_count = seq[:w].count('G')
+c_count = seq[:w].count('C')
 
 # Compute GC composition and skew for the first window 
 gc_comp = sequence.gc_comp(seq[:w])  
@@ -26,8 +26,8 @@ for i in range(1, len(seq) - w + 1):
     right_nt = seq[i + w - 1]  # Incoming nucleotide
 
     # Update GC counts 
-    G_count += (right_nt == 'G') - (left_nt == 'G')
-    C_count += (right_nt == 'C') - (left_nt == 'C')
+    g_count += (right_nt == 'G') - (left_nt == 'G')
+    c_count += (right_nt == 'C') - (left_nt == 'C')
 
     
     window_seq = seq[i:i + w]  # Extract the current window
