@@ -19,7 +19,7 @@ for defline, seq in mcb185.read_fasta(sys.argv[1]):
 
                     if len(orf_seq) >= min_len:  
                         print(f'>{defline}-prot-{orf_count}')
-                        print(orf_seq)  # Print ORF sequence
+                        print(orf_seq[:-1])  # Excludes stop codon  
                         orf_count += 1
                     
                     start = None  # Reset for next ORF
