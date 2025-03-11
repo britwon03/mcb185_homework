@@ -87,4 +87,10 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ went to TA OH to discuss 48transmembrane.py homework 
 	+ ask a question in class
 	+ threw away all code in unit 4 and redid it for practice
-- Week 10
+	+ Total 5 points 
+- Week 10: 
+	+ Attended class on Tuesday 
+	+ Helped a classmate debug her 48transmembrane.py
+	+ Attended class on Thursday 
+	+ Attempt the written live assessement on Tuesday for unit 4 
+	
