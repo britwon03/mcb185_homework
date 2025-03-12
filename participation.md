@@ -52,6 +52,7 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Answered a classmate's question in class 
 	+ Asked the TA a question on Tuesday
 	+ Total 5 points 
+
 - Week 5
 	+ Attended class on Tuesday 
 	+ Attended class on Thursday 
@@ -67,6 +68,7 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Did not attend class on Thursday because I felt unwell. 
 	+ Went to OH on Friday
 	+ Total 5 points 
+
 - Week 7: 
 	+ Attended class on Tuesday 
 	+ Asked a question in class 
@@ -74,6 +76,7 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Attempted the in class assessment again for unit 2
 	+ for practice, threw away all the code twice and redid unit 2 again.
 	+ Total 5 points 
+
 - Week 8: 
 	+ Attended class on Tuesday 
 	+ Pointed out a noticable typo in 35scoringmatrix.py 
@@ -81,6 +84,7 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ Attended class on Thursday 
 	+ Went to OH on Thursday night 
 	+ Total 5 points 
+
 - Week 9: 
 	+ Attended class on Tuesday 
 	+ Attended class on Thursday 
@@ -88,9 +92,12 @@ more than one point per category. There is a maximum of 5 points each week.
 	+ ask a question in class
 	+ threw away all code in unit 4 and redid it for practice
 	+ Total 5 points 
+	
 - Week 10: 
 	+ Attended class on Tuesday 
 	+ Helped a classmate debug her 48transmembrane.py
 	+ Attended class on Thursday 
 	+ Attempt the written live assessement on Tuesday for unit 4 
+	+ started unit 5, and asked a question in class 
+	+ Total 5 points 
 	
