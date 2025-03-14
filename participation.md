@@ -96,8 +96,8 @@ more than one point per category. There is a maximum of 5 points each week.
 - Week 10: 
 	+ Attended class on Tuesday 
 	+ Helped a classmate debug her 48transmembrane.py
-	+ Attended class on Thursday 
+	+ started unit 5 and asked a question in class 
 	+ Attempt the written live assessement on Tuesday for unit 4 
-	+ started unit 5, and asked a question in class 
+	+ Class was cancelled on Thursday(hope you feel better Dr. Korf!), so I worked on unit 5 
 	+ Total 5 points 
 	
